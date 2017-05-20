@@ -24,4 +24,15 @@ public class moveMap : MonoBehaviour {
 		SceneManager.LoadScene("park");
 	}
 
+	public void LoadHospital () {
+		SceneManager.LoadScene("hospital");
+	}
+
+	public void LoadPetShop () {
+		SceneManager.LoadScene("petShop");
+	}
+
+	public void LoadFrendsHouse () {
+		SceneManager.LoadScene("frendsHouse");
+	}
 }
