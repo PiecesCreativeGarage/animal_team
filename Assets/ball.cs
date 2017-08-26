@@ -21,38 +21,35 @@ public class ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0)) {//押したときの座標
 
 			clickPosDown = Input.mousePosition;
 		
 		}
 
-		if (Input.GetMouseButtonUp (0)) {
+		if (Input.GetMouseButtonUp (0)) {//離したときの座標
 
 			clickPosup = Input.mousePosition;
-
-		}
-
-		if(clickPosup == clickPosDown)
-		{
+			if(clickPosup == clickPosDown)//座標が同じとき動かない
+			{
 			return;
 
-		}
+			}
 
 		//llvec = (clickPosDown - clickPosup);
 		//llvec.z = ballvec.y;
 		//llvec.y = 0;
 		//llvec.Normalize ();
 		ballvec.x = 0;
-		ballvec.y = 50;
-		ballvec.z = 100;
+		ballvec.y = 1000;
+		ballvec.z = 1000;
 		ballvec.Normalize ();
-
+		power = 500;
 		rbmyball.AddForce (ballvec*power);
 
+		}
 	}
 }
-
 			
 			
 
